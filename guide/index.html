@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="黎明の迷宮の概要と遊び方。旧坑道を探索し、手札で戦い、拾った装備とカードの進化で次の部屋を攻略するターン制RPG。">
+  <meta name="theme-color" content="#131d24">
+  <title>黎明の迷宮 | ゲーム概要と遊び方</title>
+  <link rel="stylesheet" href="guide.css">
+</head>
+<body>
+  <a class="skip" href="#overview">概要へ移動</a>
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <p class="wordmark">黎明の迷宮 <span>ゲームガイド</span></p>
+      <a class="play" href="../index.html">ゲームを遊ぶ<span class="desktop">（PC向け）</span></a>
+    </div>
+  </header>
+
+  <main id="overview">
+    <section class="hero" aria-labelledby="title">
+      <div class="shell hero-copy">
+        <p class="genre">探索とカード戦闘のターン制RPG</p>
+        <h1 id="title">黎明の迷宮</h1>
+        <p class="lead">迷宮を歩き、手札で戦う。<br>育てた一枚で、次の部屋を突破する。</p>
+        <p>街の明かりを支える炉が止まった。剣士は灯りを取り戻すため、旧坑道へ降りる。</p>
+      </div>
+    </section>
+
+    <div class="shell">
+      <nav class="contents" aria-label="ページ内目次">
+        <a href="#loop">遊びの流れ</a>
+        <a href="#explore">迷宮と操作</a>
+        <a href="#combat">カード戦闘</a>
+        <a href="#growth">装備と進化</a>
+        <a href="#first-run">最初の攻略例</a>
+      </nav>
+
+      <section id="loop" class="section">
+        <header class="section-intro">
+          <h2>一戦で得たものが、次の一手を変える</h2>
+          <p>次の敵を見て装備やカードを育て、使って手応えを確かめる。その繰り返しが遊びの中心です。</p>
+        </header>
+        <ol class="loop">
+          <li><b>歩いて見つける</b><p>敵の気配、宝箱、補給場所を探す。</p></li>
+          <li><b>手札で戦う</b><p>敵の予告を見て札を選び、勝って経験値と戦利品を得る。</p></li>
+          <li><b>装備と札を育てる</b><p>剣士に装備を着け、成長点で札一枚に効果を付ける。</p></li>
+          <li><b>奥へ試しに行く</b><p>強くした札や新しい装備で、次の敵を攻略する。</p></li>
+        </ol>
+        <p class="goal"><b>試作版の目標</b>　旧坑道の地下1階・7部屋を探索し、Lv3に到達する。新しい装備を身につけ、進化した札を使った戦闘に勝つと「探索の成果」が表示されます。</p>
+      </section>
+
+      <section id="explore" class="section">
+        <header class="section-intro">
+          <h2>扉の先を見て、進む道を選ぶ</h2>
+          <p>入口の敵を倒すと分岐に出ます。各通路は同じ階の中でつながっているので、補給棚や取り残した宝箱へ戻れます。</p>
+        </header>
+        <div class="split field-section">
+          <figure>
+            <img src="../assets/guide/junction.webp" width="1280" height="720" loading="lazy" alt="旧坑道の分岐。床を歩く剣士、北・西・東の扉、右下に地図とデッキ・持ち物ボタン。">
+            <figcaption>分岐では、北・西・東に向かう道と補給棚が見えます。</figcaption>
+          </figure>
+          <div class="field-notes">
+            <h3>分岐から進める場所</h3>
+            <dl>
+              <div><dt>西</dt><dd>灰牙ネズミの運搬路。勝つと鉄剣を拾え、奥の工具置場へ行けます。</dd></div>
+              <div><dt>東</dt><dd>坑道コウモリの水抜き路。勝つと革鎧を拾え、奥の備品庫へ行けます。</dd></div>
+              <div><dt>北</dt><dd>大きな灰牙ネズミが2体いる奥の広間。育てた札を試せます。</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="input-notes">
+          <div><h3>移動と調査</h3><p>床をクリック、または <kbd>矢印キー</kbd>／<kbd>WASD</kbd> で歩きます。扉や敵をクリックすると近づいて調べます。キーボードでは対象のそばで <kbd>Enter</kbd>。</p></div>
+          <div><h3>探索中の準備</h3><p>「デッキ」で札の付与・進化、「持ち物」で薬や装備を使えます。HPとMPは戦闘を終えても持ち越します。補給棚で回復薬を4G、魔力薬を6Gで買えます。</p></div>
+        </div>
+      </section>
+
+      <section id="combat" class="section">
+        <header class="section-intro">
+          <h2>敵の次の行動を見て、手札から一枚</h2>
+          <p>デッキは7枚、開幕の手札は4枚。頭上の攻撃予告と残りMPを見て、自分の手番に何をするか決めます。</p>
+        </header>
+        <figure class="battle-picture">
+          <img src="../assets/guide/target-choice.webp" width="1280" height="720" loading="lazy" alt="斬撃を選んだ状態の戦闘画面。上に「攻撃する敵を選ぶ」、ネズミに「この敵に攻撃」、下の予測にHP8から4。">
+          <figcaption>単体攻撃の対象を選ぶ場面。敵の現在HPは頭上、選択後の見込みは手札の上に出ます。</figcaption>
+        </figure>
+        <div class="combat-detail">
+          <div>
+            <h3>カードを使う順番</h3>
+            <ol class="instructions">
+              <li><b>選ぶ</b>　斬撃・強打は札を押し、続けて敵を押すと確定。横薙ぎ・守るは札を押すと発動します。</li>
+              <li><b>解決する</b>　使う札が消え、攻撃や防御が発生。生き残った敵が予告した行動を取ります。敵を全員倒せばその場で勝利です。</li>
+              <li><b>補充する</b>　使った札は捨て札に入り、空いた場所に山札から1枚入ります。山札が尽きると捨て札を混ぜ直します。</li>
+            </ol>
+            <p class="minor">MPが足りない札には不足量が出ます。「待機」は札を1枚捨てて1手進めます。戦闘中に薬を飲む場合も1手で、手札はそのままです。</p>
+          </div>
+          <div class="card-key">
+            <h3>最初のデッキ</h3>
+            <ul>
+              <li><img src="../assets/card-slash.webp" width="56" height="42" loading="lazy" alt=""><div><b>斬撃 ×2</b><small>敵1体に4ダメージ · MP0</small></div></li>
+              <li><img src="../assets/card-sweep.webp" width="56" height="42" loading="lazy" alt=""><div><b>横薙ぎ ×2</b><small>敵全体に各4ダメージ · MP2</small></div></li>
+              <li><img src="../assets/card-heavy.webp" width="56" height="42" loading="lazy" alt=""><div><b>強打 ×1</b><small>敵1体に7ダメージ · MP2</small></div></li>
+              <li><img src="../assets/card-guard.webp" width="56" height="42" loading="lazy" alt=""><div><b>守る ×2</b><small>この手の被ダメージを1発ずつ半減 · MP0</small></div></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="growth" class="section">
+        <header class="section-intro">
+          <h2>剣士の装備と、カード一枚の進化</h2>
+          <p>拾った武器・防具は「持ち物」で剣士に一つずつ装備します。「デッキ」では、レベルアップで得た成長点を使って札一枚にスキルを付けます。</p>
+        </header>
+        <div class="gear">
+          <div><h3>武器を替える</h3><p>鉄剣は2枚の斬撃を各4から5ダメージに。大槌は強打を7から9ダメージにします。</p></div>
+          <div><h3>防具を替える</h3><p>革鎧は毎手の初めの被ダメージを1軽減。厚布の外套は各戦闘の初めの被ダメージを2軽減します。</p></div>
+        </div>
+        <div class="split training-section">
+          <div>
+            <h3>成長点1点で付与、もう1点で進化</h3>
+            <p>累計EXP5でLv2、12でLv3。各レベルで最大HPと現在HPが2増え、成長点を1点得ます。同じ横薙ぎが2枚あっても、付与が効くのは選んだ一枚です。取得済みの効果は、探索中に対応する別の札の空き枠へ移せます。</p>
+          </div>
+          <figure>
+            <img src="../assets/guide/evolution.webp" width="1280" height="720" loading="lazy" alt="カードへの付与画面。研ぎ澄まし付きの横薙ぎを選び、鋭刃か崩し刃へ進化させる。">
+            <figcaption>研ぎ澄まし付きの横薙ぎを選ぶと、二つの進化先が現れます。</figcaption>
+          </figure>
+        </div>
+        <div class="tree" aria-label="基本スキル3系統とそれぞれの進化先">
+          <div class="branch">
+            <div class="branch-root"><h3>研ぎ澄まし</h3><p>攻撃カードのダメージ＋2。</p></div>
+            <div class="branch-leaf"><h4>鋭刃</h4><p>ダメージ＋3に伸びる。</p></div>
+            <div class="branch-leaf"><h4>崩し刃</h4><p>＋2を保ち、命中後に残った敵の次の攻撃を1弱める。</p></div>
+          </div>
+          <div class="branch">
+            <div class="branch-root"><h3>節約</h3><p>攻撃カードの消費MPを1減らす。最低MP1。</p></div>
+            <div class="branch-leaf"><h4>先手の節約</h4><p>その戦闘で最初に使うときだけMP0。以後は節約。</p></div>
+            <div class="branch-leaf"><h4>魔力回収</h4><p>節約を保ち、その札で敵を倒すとMP1回復。複数倒しても一度。</p></div>
+          </div>
+          <div class="branch">
+            <div class="branch-root"><h3>押し返し</h3><p>守った手で被弾して生き残ると、その敵に2ダメージ。1手に一度。</p></div>
+            <div class="branch-leaf"><h4>強反撃</h4><p>反撃が4ダメージになる。</p></div>
+            <div class="branch-leaf"><h4>堅守</h4><p>防具まで計算したあとに残る最初の被ダメージを1軽減。実際にHPが減った攻撃には2ダメージを返す。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="first-run" class="section first-run">
+        <header class="section-intro">
+          <h2>初めてなら、横薙ぎを一枚育ててみる</h2>
+          <p>小型の敵が並ぶ坑道では、横薙ぎを何ダメージにできるかが、そのまま次の一手の違いになります。</p>
+        </header>
+        <div class="split">
+          <ol class="instructions walkthrough">
+            <li><b>入口でLv2へ</b>　坑道ネズミを斬撃2回で倒し、成長点を横薙ぎの「研ぎ澄まし」に使う。</li>
+            <li><b>西の運搬路で使う</b>　育てた横薙ぎは全体6ダメージ。引けたらHP6の敵2体を一手で倒せる。勝つと鉄剣が手に入り、Lv3へ。</li>
+            <li><b>奥へ備える</b>　鉄剣を装備し、同じ横薙ぎを「鋭刃」に進化。北の奥の広間では、HP7の敵2体を各7ダメージで仕留められる。</li>
+          </ol>
+          <figure>
+            <img src="../assets/guide/evolved-sweep.webp" width="1280" height="720" loading="lazy" alt="鋭刃付きの横薙ぎが命中し、奥の広間の敵2体に各7ダメージ。どちらもHP0。">
+            <figcaption>鋭刃付きの横薙ぎが命中。両方の敵のHPが7から0になり、反撃を受けずに勝てます。</figcaption>
+          </figure>
+        </div>
+        <p class="minor">途中の戦闘では引いた手札に合わせて進めます。欲しい札を待つ間は、守る、通常攻撃、薬、待機を使えます。</p>
+      </section>
+
+      <footer class="scope">
+        <h2>物語の先</h2>
+        <p>今回遊べるのは旧坑道の地下1階です。物語の構想では、旧坑道から水没礼拝堂を通り、地下聖火炉へ。炉に火を戻すところが剣士の旅の到達点です。</p>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>

@@ -170,3 +170,13 @@ button.card:disabled { opacity:.59; color:#272d30; cursor:default; }
 .card.played-card { position:absolute; transform-origin:50% 52%; z-index:6; pointer-events:none; outline:2px solid #f3c694; filter:brightness(1.10); }
 .card.played-card .card-use { display:none; }
 .hand .card.arriving { transition:none; }
+
+.game-shell { position:relative; width:max-content; }
+.game-guide-link { display:none; }
+#game:has(.title) + .game-guide-link {
+  display:inline-flex; position:absolute; z-index:8; top:65%; left:6.5%;
+  align-items:center; padding:.3em 0; color:#f0d3af; font-size:clamp(12px,1.3vw,19px); font-weight:680;
+  text-underline-offset:.25em;
+}
+.game-guide-link:focus-visible { outline:2px solid var(--copper); outline-offset:.25em; }
+.game-guide-link:hover { color:#ffe4bf; }
